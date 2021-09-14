@@ -3,9 +3,16 @@
 // write code here
 const wall = document.querySelector('.wall');
 
-wall.style.cssText
-= 'display: flex; justify-content: center; align-items: center';
+const wallWidth = wall.offsetWidth;
+const wallHeight = wall.offsetHeight;
 
 const spider = document.querySelector('.spider');
 
-spider.style.cssText = 'position: unset';
+const spiderWidth = spider.offsetWidth;
+const spiderHeight = spider.offsetHeight;
+
+const newTop = wallHeight / 2 - spiderHeight / 2 + 'px';
+const newLeft = wallWidth / 2 - spiderWidth / 2 + 'px';
+
+spider.style.top = newTop;
+spider.style.left = newLeft;
